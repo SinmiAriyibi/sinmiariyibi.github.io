@@ -253,34 +253,64 @@ h3{ font-size:20px; }
 .card + .card{ margin-top:16px; }
 
 /* Projects grid */
-/* Ensure Projects stay 2-column on desktop */
-@media (min-width: 881px){
-  .grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-  
+/* =========================
+   Projects (clean + consistent)
+   ========================= */
+
+.grid{
+  display: grid;
+  gap: 22px;
+}
+
+/* Projects grid: 2-up desktop, 1-up mobile */
+.projectsGrid{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+@media (max-width: 880px){
+  .projectsGrid{ grid-template-columns: 1fr; }
+}
+
+/* Make both cards the same height */
+.project{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;                 /* important: cover + body control spacing */
+  overflow: hidden;           /* keeps cover corners clean */
+}
+
+/* Uniform cover height, NO purple splashes */
 .project__cover{
-  height:150px;
-  display:grid;
-  place-items:center;
-  background:
-    radial-gradient(600px 220px at 15% 10%, rgba(139,92,246,.24), transparent 60%),
-    radial-gradient(600px 220px at 80% 0%, rgba(244,114,182,.18), transparent 60%),
-    color-mix(in srgb, var(--card) 85%, transparent);
-  border-bottom:1px solid var(--border);
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border-bottom: 1px solid var(--border);
 }
+
 .coverPlaceholder{
-  font-weight:850;
-  color: color-mix(in srgb, var(--text) 65%, var(--muted));
+  font-weight: 850;
+  color: color-mix(in srgb, var(--text) 70%, var(--muted));
 }
+
+/* Body stretches, buttons pin to bottom */
 .project__body{
-  padding:18px 18px 16px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
+
 .project__links{
-  display:flex;
-  gap:10px;
-  margin-top:12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
 }
+
 
 /* Experience */
 .stack{ display:grid; gap:16px; }
