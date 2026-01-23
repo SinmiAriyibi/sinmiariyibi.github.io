@@ -253,15 +253,12 @@ h3{ font-size:20px; }
 .card + .card{ margin-top:16px; }
 
 /* Projects grid */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:18px;
-}
-.project{
-  overflow:hidden;
-  padding:0;
-}
+/* Ensure Projects stay 2-column on desktop */
+@media (min-width: 881px){
+  .grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  
 .project__cover{
   height:150px;
   display:grid;
