@@ -355,3 +355,15 @@ h3{ font-size:20px; }
   .grid{ grid-template-columns: 1fr; }
   .contactRow{ grid-template-columns: 1fr; }
 }
+  .projectsGrid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+
+@media (max-width: 880px){
+  .projectsGrid{
+    grid-template-columns: 1fr !important;
+  }
+}
+
