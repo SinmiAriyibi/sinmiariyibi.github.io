@@ -1,14 +1,15 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sinmi Ariyibi | Portfolio</title>
-  <meta name="description" content="Business Analyst | Data + Strategy — projects, experience, skills, and contact."/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Sinmi Ariyibi — Business Analyst | Data + Strategy. Portfolio, projects, and experience." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
+  <!-- Topbar -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#home">Sinmi Ariyibi</a>
@@ -23,9 +24,8 @@
       </nav>
 
       <div class="topbar__actions">
-        <!-- Optional: upload resume.pdf to repo root -->
         <a class="btn btn--ghost" href="./resume.pdf" download>Download Resume</a>
-        <button id="themeToggle" class="iconBtn" aria-label="Toggle theme" title="Toggle theme">☼</button>
+        <button id="themeToggle" class="iconBtn" aria-label="Toggle theme" title="Toggle theme">✶</button>
       </div>
     </div>
   </header>
@@ -34,100 +34,106 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero__avatar">
-        <!-- Optional: upload headshot.jpg to repo root -->
-        <img src="./headshot.jpg" alt="Portrait of Sinmi Ariyibi"
-             onerror="this.src='https://via.placeholder.com/180';"/>
+        <img src="./headshot.jpg" alt="Sinmi Ariyibi headshot" onerror="this.src='https://via.placeholder.com/180';" />
       </div>
 
       <div class="hero__content">
         <h1>Sinmi Ariyibi</h1>
 
         <div class="pill" role="status" aria-label="Availability">
-          <span class="dot"></span> Available for work
+          <span class="dot"></span>
+          <span>Available for work</span>
         </div>
 
         <div class="metaRow">
-          <div class="metaItem"><span class="metaIcon">💼</span><span>Business Analyst | Data + Strategy</span></div>
-          <div class="metaItem"><span class="metaIcon">📍</span><span>Atlanta</span></div>
-          <div class="metaItem"><span class="metaIcon">🕒</span><span id="localTime">--:-- --</span></div>
+          <div class="metaItem">💼 <span>Business Analyst | Data + Strategy</span></div>
+          <div class="metaItem">📍 <span>Atlanta</span></div>
+          <div class="metaItem">🕒 <span id="localTime">—</span></div>
         </div>
 
-        <div class="heroLinks">
-  <!-- Email -->
-  <a class="iconLink" href="mailto:ariyibisinmi@gmail.com" aria-label="Email">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 7L3.5 8.2A1 1 0 0 1 4 8h16a1 1 0 0 1 .5.2L12 13zm-8 5h16V9.3l-7.4 4.9a1 1 0 0 1-1.2 0L4 9.3V18z"/>
-    </svg>
-  </a>
+        <div class="heroLinks" aria-label="Social links">
+          <!-- Email -->
+          <a class="iconLink" href="mailto:ariyibisinmi@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 7L3.5 8.2A1 1 0 0 1 4 8h16a1 1 0 0 1 .5.2L12 13zm-8 5h16V9.3l-7.4 4.9a1 1 0 0 1-1.2 0L4 9.3V18z"/>
+            </svg>
+          </a>
 
-  <!-- LinkedIn -->
-  <a class="iconLink" href="https://www.linkedin.com/in/sinmi-ariyibi" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.94 6.5A2.19 2.19 0 1 1 7 2.12a2.19 2.19 0 0 1-.06 4.38zM3.5 21h6.9V8.98H3.5V21zM13.04 8.98H20v1.64h.1c1-1.9 3.47-3.9 6.9-3.9V21h-6.9v-6.5c0-1.55-.03-3.55-2.16-3.55-2.16 0-2.5 1.69-2.5 3.43V21h-6.9V8.98h6.6z"/>
-    </svg>
-  </a>
+          <!-- LinkedIn -->
+          <a class="iconLink" href="https://www.linkedin.com/in/sinmi-ariyibi" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 6.5A2.19 2.19 0 1 1 7 2.12a2.19 2.19 0 0 1-.06 4.38zM3.5 21h6.9V8.98H3.5V21zM13.04 8.98H20v1.64h.1c1-1.9 3.47-3.9 6.9-3.9V21h-6.9v-6.5c0-1.55-.03-3.55-2.16-3.55-2.16 0-2.5 1.69-2.5 3.43V21h-6.9V8.98h6.6z"/>
+            </svg>
+          </a>
 
-  <!-- GitHub -->
-  <a class="iconLink" href="https://github.com/SinmiAriyibi" target="_blank" rel="noopener" aria-label="GitHub">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 .5A12 12 0 0 0 8.2 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.4 3.5 18.4 3.8 18.4 3.8c.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/>
-    </svg>
-  </a>
+          <!-- GitHub -->
+          <a class="iconLink" href="https://github.com/SinmiAriyibi" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5A12 12 0 0 0 8.2 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.4 3.5 18.4 3.8 18.4 3.8c.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/>
+            </svg>
+          </a>
 
-  <!-- Tableau -->
-  <a class="iconLink" href="https://public.tableau.com/app/profile/sinmi.ariyibi/vizzes" target="_blank" rel="noopener" aria-label="Tableau Public">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M11 2h2v4h-2V2zm0 16h2v4h-2v-4zM2 11h4v2H2v-2zm16 0h4v2h-4v-2zM6.2 6.2l1.4-1.4 2.8 2.8-1.4 1.4L6.2 6.2zm8.6 8.6 1.4-1.4 2.8 2.8-1.4 1.4-2.8-2.8zM17.8 6.2 15 9l-1.4-1.4 2.8-2.8 1.4 1.4zM9 15l-2.8 2.8-1.4-1.4L7.6 13.6 9 15zM11 9h2v6h-2V9z"/>
-    </svg>
-  </a>
-</div>
-
+          <!-- Tableau (replace link when you have it) -->
+          <a class="iconLink" href="https://public.tableau.com/" target="_blank" rel="noopener" aria-label="Tableau Public">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M11 2h2v4h-2V2zm0 16h2v4h-2v-4zM2 11h4v2H2v-2zm16 0h4v2h-4v-2zM6.2 6.2l1.4-1.4 2.8 2.8-1.4 1.4L6.2 6.2zm8.6 8.6 1.4-1.4 2.8 2.8-1.4 1.4-2.8-2.8zM17.8 6.2 15 9l-1.4-1.4 2.8-2.8 1.4 1.4zM9 15l-2.8 2.8-1.4-1.4L7.6 13.6 9 15zM11 9h2v6h-2V9z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT -->
- 
-    <section id="About Me" class="section">
-  <h2>About Me</h2>  
- <p>
-  Hello! I’m <strong>Sinmi Ariyibi</strong> an aspiring <strong>Business Analyst</strong> who turns messy data into clear decisions.
-  I build dashboards, financial trackers, and data-driven stories that help teams prioritize the right actions, not just “look at numbers.”
-</p>
-<p>
-  Recently, I supported <strong>GTM execution at Pronghorn (Edmond’s Honor)</strong> by creating data-informed sales decks,
-  pricing insights, and SOPs that improved pipeline visibility and speed. I also lead finance operations for
-  <strong>The Rock Nation</strong>, where I manage budgets, reporting, and funding initiatives with clean, reliable Excel systems.
-</p>
-  I’m strongest at the intersection of <strong>analysis + storytelling</strong> — translating metrics into narratives stakeholders trust.
-  Tools: <strong>Excel, SQL, Tableau and Python.
-</p>
-    
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          Hello! I’m <strong>Sinmi Ariyibi</strong>, an aspiring <strong>Business Analyst</strong> who turns messy data into clear decisions.
+          I build dashboards, trackers, and data-driven stories that help teams prioritize the right actions — not just “look at numbers.”
+        </p>
+        <p>
+          Recently, I supported GTM execution at <strong>Pronghorn (Edmond’s Honor)</strong> by creating data-informed sales decks, pricing insights, and SOPs
+          that improved pipeline visibility and speed. I also lead finance operations for <strong>The Rock Nation</strong>, managing budgets and reporting through
+          clean, reliable Excel systems.
+        </p>
+        <p>
+          I’m strongest at the intersection of <strong>analysis + storytelling</strong> — translating metrics into narratives stakeholders trust.
+          Tools: <strong>Excel, SQL, Tableau, Python</strong>.
+        </p>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
-    
     <section id="projects" class="section">
       <h2>Projects</h2>
 
       <div class="grid">
+        <!-- Project 1 -->
         <article class="card project">
-          <div class="project__cover"><div class="coverPlaceholder">Project Cover</div></div>
+          <div class="project__cover">
+            <div class="coverPlaceholder">Airbnb NYC Dashboard</div>
+          </div>
           <div class="project__body">
-            <h3>Airbnb NYC Market Dashboard</h3>
-            <p class="muted">Built an interactive Tableau dashboard surfacing pricing, availability, and demand trends by neighborhood.</p>
-            <p class="muted"><strong>Skills:</strong> Tableau, Data Cleaning, KPI Design</p>
+            <h3>Airbnb NYC Market Dashboard (Tableau)</h3>
+            <p class="muted">Neighborhood pricing, availability, and demand insights to support market decisions.</p>
             <div class="project__links">
-              <a class="btn btn--sm" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">View</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Repo</a>
             </div>
           </div>
         </article>
 
+        <!-- Project 2 -->
         <article class="card project">
-          <div class="project__cover"><div class="coverPlaceholder">Project Cover</div></div>
+          <div class="project__cover">
+            <div class="coverPlaceholder">Coffee Shop Sales</div>
+          </div>
           <div class="project__body">
-            <h3>Coffee Shop Sales Dashboard</h3>
-            <p class="muted">12-month Excel dashboard with KPIs, segmentation, and visuals for sales performance tracking.</p>
-            <p class="muted"><strong>Skills:</strong> Excel, Pivot Tables, Data Visualization</p>
+            <h3>Coffee Shop Sales Dashboard (Excel)</h3>
+            <p class="muted">12-month KPI dashboard with segmentation and decision-ready visuals.</p>
             <div class="project__links">
-              <a class="btn btn--sm" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noreferrer">Preview</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">View</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Repo</a>
             </div>
           </div>
         </article>
@@ -135,72 +141,77 @@
     </section>
 
     <!-- EXPERIENCE -->
-    
-    <section id="Experience" class="section">
- <div class="stack">
-   <h2>Experience</h2>
+    <section id="experience" class="section">
+      <h2>Experience</h2>
 
-  <article class="card">
-    <div class="expHeader">
-      <h3>Business Development Specialist Intern</h3>
-      <div class="muted">Pronghorn (Edmond’s Honor)</div>
-    </div>
-    <div class="muted">June 2025 – August 2025</div>
+      <div class="stack">
+        <!-- Pronghorn -->
+        <div class="card">
+          <div class="expHeader">
+            <div>
+              <h3>Business Development Specialist Intern</h3>
+              <div class="muted"><strong>June 2025 – August 2025</strong></div>
+            </div>
+            <div class="muted"><strong>Pronghorn (Edmond’s Honor)</strong></div>
+          </div>
+          <ul class="bullets">
+            <li><strong>Designed and executed 4+ data-informed sales decks</strong> and <strong>3 distributor sell sheets</strong> (MHW, LibDib) for brand positioning and GTM execution.</li>
+            <li>Identified brand market penetration and leveraged <strong>pricing analytics</strong> to drive conversion across <strong>20+ account touchpoints</strong>.</li>
+            <li>Developed a cross-functional <strong>National Accounts SOP</strong> for intake, triage, and routing of <strong>50+ leads</strong> worth approximately <strong>$1M</strong> in new business.</li>
+            <li><strong>Reduced lead-processing time</strong> from <strong>24 hours to 1 hour</strong>, improving pipeline visibility for a <strong>12-member</strong> Commercial Team.</li>
+            <li>Co-developed the Edmond’s Honor Sales Playbook with KPI-aligned frameworks, strengthening <strong>data storytelling for business strategy</strong>.</li>
+          </ul>
+        </div>
 
-    <ul class="bullets">
-      <li><strong>Designed and executed 4+ data-informed sales decks</strong> and <strong>3 distributor sell sheets</strong> (MHW, LibDib) for brand positioning and go-to-market execution.</li>
-      <li><strong>Identified brand market penetration</strong> and leveraged <strong>pricing analytics</strong> to drive conversion across <strong>20+ account touchpoints</strong>.</li>
-      <li>Developed a cross-functional <strong>National Accounts SOP</strong> for intake, triage, and routing of <strong>50+ leads</strong> worth approximately <strong>$1M</strong> in new business.</li>
-      <li><strong>Reduced lead-processing time from 24 hours to 1 hour</strong>, improving pipeline visibility for a <strong>12-member Commercial Team</strong>.</li>
-      <li>Co-developed the <strong>Edmond’s Honor Sales Playbook</strong> featuring a <strong>5-day training module</strong> and KPI-aligned frameworks, strengthening <strong>data storytelling</strong> for business strategy.</li>
-    </ul>
-  </article>
+        <!-- Rock Nation -->
+        <div class="card">
+          <div class="expHeader">
+            <div>
+              <h3>Treasurer</h3>
+              <div class="muted"><strong>August 2024 – Present</strong></div>
+            </div>
+            <div class="muted"><strong>The Rock Nation</strong></div>
+          </div>
+          <ul class="bullets">
+            <li>Created a comprehensive financial tracking system using <strong>Excel PivotTables and Macros</strong>, reducing reporting errors by <strong>20%</strong>.</li>
+            <li>Manage a <strong>$2,000+</strong> annual budget, ensuring compliance, transparency, and clear reporting to members.</li>
+            <li>Secured <strong>$1,700+</strong> in external funding through proposal writing, engagement, and community outreach.</li>
+            <li>Supported leadership decisions through budget reviews, funding strategy, and <strong>financial analysis</strong>.</li>
+          </ul>
+        </div>
 
-  <article class="card">
-    <div class="expHeader">
-      <h3>Treasurer</h3>
-      <div class="muted">The Rock Nation</div>
-    </div>
-    <div class="muted">August 2024 – Present</div>
-
-    <ul class="bullets">
-      <li>Created a comprehensive financial tracking system using <strong>Excel PivotTables</strong> and <strong>Macros</strong>, reducing reporting errors by <strong>20%</strong>.</li>
-      <li>Manage a <strong>$2,000+ annual budget</strong>, ensuring compliance, transparency, and clear reporting to members.</li>
-      <li>Secured <strong>$1,700+ in external funding</strong> through proposal writing, engagement, and community outreach.</li>
-      <li>Supported leadership decisions through <strong>budget reviews</strong>, <strong>funding strategy</strong>, and <strong>financial analysis</strong>.</li>
-    </ul>
-  </article>
-
-  <article class="card">
-    <div class="expHeader">
-      <h3>Market Research Extern — Alliance for Education Consulting</h3>
-      <div class="muted">PwC (PricewaterhouseCoopers)</div>
-    </div>
-    <div class="muted">January 2024 – March 2024</div>
-
-    <ul class="bullets">
-      <li>Conducted market and internal research to identify operational workflow gaps using <strong>SWOT analysis</strong> and structured decision-making.</li>
-      <li>Collaborated with interdisciplinary teams to design and present improvement strategies to leadership and stakeholders.</li>
-      <li>Contributed to a <strong>15% boost in team efficiency</strong> through process redesign; selected as a <strong>finalist</strong> from a cohort of <strong>40+ externs</strong>.</li>
-    </ul>
-  </article>
-
-</div>
+        <!-- PwC -->
+        <div class="card">
+          <div class="expHeader">
+            <div>
+              <h3>Market Research Extern — Alliance for Education Consulting</h3>
+              <div class="muted"><strong>January 2024 – March 2024</strong></div>
+            </div>
+            <div class="muted"><strong>PwC (Remote)</strong></div>
+          </div>
+          <ul class="bullets">
+            <li>Conducted market and internal research to identify workflow gaps using <strong>SWOT analysis</strong> and structured decision-making.</li>
+            <li>Partnered with interdisciplinary teams to design and present improvement strategies to leadership.</li>
+            <li>Contributed to a <strong>15% boost</strong> in team efficiency via process redesign; selected as a <strong>finalist</strong> from a cohort of <strong>40+ externs</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- SKILLS -->
- <section id="skills" class="section">
-  <h2>Skills</h2>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
 
-  <div class="card">
-    <ul class="skillsList">
-      <li><strong>Data Analysis</strong> — cleaning, analyzing, and interpreting datasets to support decisions.</li>
-      <li><strong>Dashboard Development</strong> — Tableau + Excel dashboards that are clean and decision-ready.</li>
-      <li><strong>ETL & Reporting</strong> — structuring workflows, validating data, and maintaining reporting accuracy.</li>
-      <li><strong>SQL + Python</strong> — SQL for querying/metrics; Python (pandas/Jupyter) for analysis.</li>
-      <li><strong>Communication</strong> — stakeholder-ready decks and data storytelling for strategy.</li>
-    </ul>
-  </div>
-</section>
+      <div class="card">
+        <ul class="skillsList">
+          <li><strong>Data Analysis</strong> — cleaning, analyzing, and interpreting datasets to support decisions.</li>
+          <li><strong>Dashboard Development</strong> — Tableau + Excel dashboards that are clean and decision-ready.</li>
+          <li><strong>ETL & Reporting</strong> — structuring workflows, validating data, and maintaining reporting accuracy.</li>
+          <li><strong>SQL + Python</strong> — SQL for querying/metrics; Python (pandas/Jupyter) for analysis.</li>
+          <li><strong>Communication</strong> — stakeholder-ready decks and data storytelling for strategy.</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
@@ -208,27 +219,35 @@
 
       <div class="card contact">
         <div class="contactRow">
-          <div class="muted">Email:</div>
-          <a href="mailto:ariyibisinmi@gmail.com">ariyibisinmi@gmail.com</a>
+          <div class="muted"><strong>Email:</strong></div>
+          <div><a href="mailto:ariyibisinmi@gmail.com">ariyibisinmi@gmail.com</a></div>
         </div>
 
         <div class="contactRow">
-          <div class="muted">LinkedIn:</div>
-          <a href="www.linkedin.com/in/sinmi-ariyibi" target="_blank" rel="noreferrer">www.linkedin.com/in/sinmi-ariyibi</a>
+          <div class="muted"><strong>LinkedIn:</strong></div>
+          <div>
+            <a href="https://www.linkedin.com/in/sinmi-ariyibi" target="_blank" rel="noopener">
+              linkedin.com/in/sinmi-ariyibi
+            </a>
+          </div>
         </div>
 
         <div class="contactRow">
-          <div class="muted">GitHub:</div>
-          <a href="https://github.com/SinmiAriyibi" target="_blank" rel="noreferrer">github.com/SinmiAriyibi</a>
+          <div class="muted"><strong>GitHub:</strong></div>
+          <div>
+            <a href="https://github.com/SinmiAriyibi" target="_blank" rel="noopener">
+              github.com/SinmiAriyibi
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="muted">© <span id="year"></span> Sinmi Ariyibi. All rights reserved.</div>
+    <footer class="footer muted">
+      © <span id="year"></span> Sinmi Ariyibi
     </footer>
   </main>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
