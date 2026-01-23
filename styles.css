@@ -1,20 +1,18 @@
 :root{
+  /* Light */
   --bg:#ffffff;
   --text:#0b1220;
   --muted:#51606f;
 
-  /* Sinmi accents: soft, polished */
-  --accent:#8b5cf6;    /* violet */
-  --accent2:#f472b6;   /* soft pink */
-
+  --accent:#4f7cff;              /* clean blue (NOT purple) */
   --card:#fbfbfe;
   --border:#e8eaf2;
 
   --shadow:0 10px 30px rgba(11,18,32,.08);
-  --shadow2:0 8px 18px rgba(11,18,32,.10);
+  --shadow2:0 10px 22px rgba(11,18,32,.12);
 
-  --pillBg:rgba(139,92,246,.10);
-  --pillText:#241b3b;
+  --pillBg:rgba(79,124,255,.10);
+  --pillText:#14224a;
 
   --radius:18px;
 }
@@ -25,13 +23,13 @@
   --muted:#a3b0c2;
 
   --card:#0d1627;
-  --border:rgba(255,255,255,.08);
+  --border:rgba(255,255,255,.10);
 
   --shadow:0 14px 40px rgba(0,0,0,.35);
-  --shadow2:0 10px 20px rgba(0,0,0,.25);
+  --shadow2:0 10px 22px rgba(0,0,0,.28);
 
-  --pillBg:rgba(139,92,246,.12);
-  --pillText:#e9ddff;
+  --pillBg:rgba(79,124,255,.14);
+  --pillText:#dbe5ff;
 }
 
 *{ box-sizing:border-box; }
@@ -39,7 +37,7 @@ html,body{ height:100%; }
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: var(--bg);
+  background:var(--bg);
   color:var(--text);
   line-height:1.6;
 }
@@ -57,7 +55,7 @@ a:hover{ text-decoration:underline; }
   position:sticky;
   top:0;
   z-index:50;
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: blur(10px);
   border-bottom:1px solid var(--border);
 }
@@ -69,7 +67,7 @@ a:hover{ text-decoration:underline; }
   padding:14px 0;
 }
 .brand{
-  font-weight:800;
+  font-weight:850;
   letter-spacing:-0.2px;
 }
 .nav{
@@ -89,7 +87,6 @@ a:hover{ text-decoration:underline; }
   background: color-mix(in srgb, var(--card) 70%, transparent);
   text-decoration:none;
 }
-
 .topbar__actions{
   display:flex;
   align-items:center;
@@ -105,20 +102,19 @@ a:hover{ text-decoration:underline; }
   padding:10px 14px;
   border-radius:999px;
   border:1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 85%, transparent);
+  background: color-mix(in srgb, var(--card) 88%, transparent);
   color:var(--text);
   font-weight:750;
   font-size:14px;
   box-shadow:none;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
 .btn:hover{
   transform:translateY(-1px);
   box-shadow: var(--shadow2);
   text-decoration:none;
 }
-.btn--ghost{
-  background: transparent;
-}
+.btn--ghost{ background: transparent; }
 .btn--sm{
   padding:8px 12px;
   font-size:13px;
@@ -129,20 +125,19 @@ a:hover{ text-decoration:underline; }
   height:42px;
   border-radius:999px;
   border:1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 85%, transparent);
+  background: color-mix(in srgb, var(--card) 88%, transparent);
   color:var(--text);
   font-weight:900;
   cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
 .iconBtn:hover{
   transform:translateY(-1px);
   box-shadow: var(--shadow2);
 }
 
-/* Sections */
-.section{
-  padding:46px 0 0;
-}
+/* Sections + headings */
+.section{ padding:46px 0 0; }
 h1,h2,h3{
   margin:0 0 10px;
   line-height:1.15;
@@ -157,19 +152,19 @@ h3{ font-size:20px; }
 /* Hero */
 .hero{
   display:grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 220px 1fr;
   gap:30px;
   align-items:center;
   padding:46px 0 10px;
 }
 .hero__avatar{
-  width:210px;
-  height:210px;
+  width:220px;
+  height:220px;
   border-radius:999px;
   overflow:hidden;
-  border:2px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border:2px solid color-mix(in srgb, var(--border) 65%, transparent);
   box-shadow: var(--shadow);
-  background: color-mix(in srgb, var(--card) 85%, transparent);
+  background: color-mix(in srgb, var(--card) 88%, transparent);
 }
 .hero__avatar img{
   width:100%;
@@ -177,9 +172,7 @@ h3{ font-size:20px; }
   object-fit:cover;
   display:block;
 }
-.hero__content h1{
-  margin-bottom:12px;
-}
+.hero__content h1{ margin-bottom:12px; }
 
 /* Availability pill */
 .pill{
@@ -188,7 +181,7 @@ h3{ font-size:20px; }
   gap:10px;
   padding:10px 14px;
   border-radius:999px;
-  border:1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+  border:1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
   background: var(--pillBg);
   color: var(--pillText);
   font-weight:750;
@@ -216,7 +209,7 @@ h3{ font-size:20px; }
   align-items:center;
 }
 
-/* Social Icons */
+/* Hero icon links */
 .heroLinks{
   display:flex;
   gap:12px;
@@ -226,7 +219,7 @@ h3{ font-size:20px; }
   height:52px;
   border-radius:999px;
   border:1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 90%, transparent);
+  background: color-mix(in srgb, var(--card) 92%, transparent);
   display:grid;
   place-items:center;
   transition: transform .12s ease, box-shadow .12s ease;
@@ -239,7 +232,7 @@ h3{ font-size:20px; }
 .iconLink svg{
   width:22px;
   height:22px;
-  fill: color-mix(in srgb, var(--text) 85%, var(--muted));
+  fill: color-mix(in srgb, var(--text) 88%, var(--muted));
 }
 
 /* Cards */
@@ -247,73 +240,18 @@ h3{ font-size:20px; }
   background: color-mix(in srgb, var(--card) 92%, transparent);
   border:1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: none;
+  box-shadow:none;
+}
+.card > *:first-child{ margin-top:0; }
+
+.stack{ display:grid; gap:16px; }
+
+/* Ensure consistent inner padding */
+.card{
   padding:22px;
 }
-.card + .card{ margin-top:16px; }
 
-/* Projects grid */
-/* =========================
-   Projects (clean + consistent)
-   ========================= */
-
-.grid{
-  display: grid;
-  gap: 22px;
-}
-
-/* Projects grid: 2-up desktop, 1-up mobile */
-.projectsGrid{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
-}
-
-@media (max-width: 880px){
-  .projectsGrid{ grid-template-columns: 1fr; }
-}
-
-/* Make both cards the same height */
-.project{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0;                 /* important: cover + body control spacing */
-  overflow: hidden;           /* keeps cover corners clean */
-}
-
-/* Uniform cover height, NO purple splashes */
-.project__cover{
-  height: 150px;
-  display: grid;
-  place-items: center;
-  background: color-mix(in srgb, var(--card) 92%, transparent);
-  border-bottom: 1px solid var(--border);
-}
-
-.coverPlaceholder{
-  font-weight: 850;
-  color: color-mix(in srgb, var(--text) 70%, var(--muted));
-}
-
-/* Body stretches, buttons pin to bottom */
-.project__body{
-  padding: 18px 18px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.project__links{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: auto;
-}
-
-
-/* Experience */
-.stack{ display:grid; gap:16px; }
+/* Experience header */
 .expHeader{
   display:flex;
   align-items:flex-start;
@@ -322,7 +260,7 @@ h3{ font-size:20px; }
 }
 .expHeader h3{ margin-bottom:6px; }
 
-/* Bullets (GLOBAL) */
+/* Global bullets */
 .bullets{
   margin:12px 0 0;
   padding-left:18px;
@@ -331,19 +269,54 @@ h3{ font-size:20px; }
   margin:7px 0;
 }
 .bullets li::marker{
-  color: color-mix(in srgb, var(--accent) 70%, var(--text));
+  color: var(--accent);
+}
+.bullets--tight li{ margin:9px 0; }
+
+/* Projects grid (equal-size cards) */
+.projectsGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:22px;
+  align-items:stretch;
 }
 
-/* Skills list (same style as bullets) */
-.skillsList{
-  margin:0;
-  padding-left:18px;
+.project{
+  padding:0;                 /* project cards handle their own internal padding */
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
 }
-.skillsList li{
-  margin:10px 0;
+
+.project__cover{
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 18px;
+  background: color-mix(in srgb, var(--card) 92%, transparent); /* no gradients, no splashes */
+  border-bottom:1px solid var(--border);
 }
-.skillsList li::marker{
-  color: color-mix(in srgb, var(--accent) 70%, var(--text));
+.coverTitle{
+  font-weight:850;
+  letter-spacing:-0.2px;
+  color: color-mix(in srgb, var(--text) 82%, var(--muted));
+  line-height:1.1;
+}
+
+.project__body{
+  padding:18px 18px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  flex:1;                   /* THIS is what keeps both cards equal height */
+}
+.project__body h3{ margin:0; }
+.project__links{
+  display:flex;
+  gap:10px;
+  margin-top:auto;          /* pushes buttons to bottom for uniform layout */
 }
 
 /* Contact */
@@ -357,9 +330,7 @@ h3{ font-size:20px; }
   gap:12px;
   align-items:baseline;
 }
-.contact a{
-  font-weight:750;
-}
+.contact a{ font-weight:750; }
 
 /* Footer */
 .footer{
@@ -370,7 +341,7 @@ h3{ font-size:20px; }
 }
 
 /* Responsive */
-@media (max-width: 880px){
+@media (max-width: 900px){
   h1{ font-size:44px; }
   .hero{
     grid-template-columns: 1fr;
@@ -380,20 +351,7 @@ h3{ font-size:20px; }
   }
   .heroLinks{ justify-content:center; }
   .metaRow{ justify-content:center; }
-  .topbar__inner{ gap:10px; }
-  .nav{ display:none; } /* keep simple on mobile */
-  .grid{ grid-template-columns: 1fr; }
+  .nav{ display:none; }
+  .projectsGrid{ grid-template-columns: 1fr; }
   .contactRow{ grid-template-columns: 1fr; }
 }
-  .projectsGrid{
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 22px !important;
-}
-
-@media (max-width: 880px){
-  .projectsGrid{
-    grid-template-columns: 1fr !important;
-  }
-}
-
