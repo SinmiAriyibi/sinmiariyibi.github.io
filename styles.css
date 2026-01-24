@@ -273,7 +273,7 @@ h3{ font-size:20px; }
 }
 .bullets--tight li{ margin:9px 0; }
 
-/* Projects grid (equal-size cards) */
+/* Projects grid */
 .projectsGrid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -281,42 +281,58 @@ h3{ font-size:20px; }
   align-items:stretch;
 }
 
+/* Project card */
 .project{
-  padding:0;                 /* project cards handle their own internal padding */
+  padding:0;
   display:flex;
   flex-direction:column;
   overflow:hidden;
 }
 
+/* Project cover (IMAGE PREVIEW) */
 .project__cover{
   height:150px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:0 18px;
-  background: color-mix(in srgb, var(--card) 92%, transparent); /* no gradients, no splashes */
+  overflow:hidden;
   border-bottom:1px solid var(--border);
-}
-.coverTitle{
-  font-weight:850;
-  letter-spacing:-0.2px;
-  color: color-mix(in srgb, var(--text) 82%, var(--muted));
-  line-height:1.1;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
 }
 
+.project__cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform .18s ease;
+}
+
+.project:hover .project__cover img{
+  transform: scale(1.03);
+}
+
+/* Project body */
 .project__body{
   padding:18px 18px 16px;
   display:flex;
   flex-direction:column;
   gap:8px;
-  flex:1;                   /* THIS is what keeps both cards equal height */
+  flex:1;
 }
-.project__body h3{ margin:0; }
+
+.project__body h3{
+  margin:0;
+}
+
 .project__links{
   display:flex;
   gap:10px;
-  margin-top:auto;          /* pushes buttons to bottom for uniform layout */
+  margin-top:auto;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .projectsGrid{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Contact */
