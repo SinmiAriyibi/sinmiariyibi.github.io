@@ -430,4 +430,26 @@ h3{ font-size:20px; }
   margin-top: 10px;              /* smaller than before */
   gap: 10px;
 }
+.project__cover{
+  height: 260px;
+  padding: 14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* subtle “studio” background so white space looks intentional */
+  background: linear-gradient(180deg, #ffffff, #f7f8fb);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+
+.project__cover img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  display:block;
+
+  /* makes device pop */
+  filter: drop-shadow(0 16px 30px rgba(0,0,0,.12));
+}
 
