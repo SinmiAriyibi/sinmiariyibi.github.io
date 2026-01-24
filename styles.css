@@ -452,4 +452,25 @@ h3{ font-size:20px; }
   /* makes device pop */
   filter: drop-shadow(0 16px 30px rgba(0,0,0,.12));
 }
+.project__body{
+  padding: 14px 18px 16px;
+}
+
+.project__body h3{
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.project__body p{
+  margin: 6px 0;
+}
+
+/* make Skills look like a small meta line instead of another paragraph */
+.project__body p strong{
+  font-weight: 800;
+}
+
+.project__body .muted{
+  font-size: 14.5px;   /* slightly smaller so it looks tighter */
+}
 
