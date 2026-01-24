@@ -389,3 +389,45 @@ h3{ font-size:20px; }
   display: block;
 }
 
+/* Make the cover taller (bigger image preview) */
+.project__cover{
+  height: 280px;                 /* was 220 — adjust 260–300 if you want */
+  padding: 10px 14px;            /* gives breathing room without wasting space */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+
+/* Let the image fill more of the cover */
+.project__cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display:block;
+}
+
+/* Tighten the project body spacing */
+.project__body{
+  padding: 14px 18px 14px;       /* smaller than before */
+  gap: 6px;                      /* if you’re using flex+gap; safe either way */
+}
+
+/* Reduce paragraph spacing inside project cards */
+.project__body p{
+  margin: 6px 0;
+}
+
+/* Tighten title spacing */
+.project__body h3{
+  margin: 0 0 6px;
+}
+
+/* Bring buttons closer + keep them neat */
+.project__links{
+  margin-top: 10px;              /* smaller than before */
+  gap: 10px;
+}
+
